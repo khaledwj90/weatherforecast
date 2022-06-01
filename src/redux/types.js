@@ -4,7 +4,4 @@ import Util from '../util';
 
 export type LoginStatusType = null | string;
 
-export type UserDetailsType = {
-
-
-}
+export type UserDetailsType = {};

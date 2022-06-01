@@ -1,4 +1,4 @@
-import type {LoginStatusType} from "../types";
+import type {LoginStatusType} from '../types';
 
 export const SET_LOGIN_STATUS_ACTION = 'set-login-status-action';
 
@@ -7,6 +7,5 @@ export const SET_LOGIN_STATUS_ACTION = 'set-login-status-action';
  * null - app still loading - we don't know the status yet - show loader
  */
 export function SetLoginStatus(status: LoginStatusType) {
-    return ({type: SET_LOGIN_STATUS_ACTION, payload: status});
+  return {type: SET_LOGIN_STATUS_ACTION, payload: status};
 }
-

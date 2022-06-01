@@ -11,31 +11,31 @@ import {Splashscreen} from '../components/Splashscreen';
 import Util from '../util';
 import RouteConstants from './constants';
 
+const MainRoutes = props => {
+  const {LoginStatus} = useSelector(state => state);
+  const dispatch = useDispatch();
 
-const MainRoutes = (props) => {
-    const {LoginStatus} = useSelector((state) => state);
-    const dispatch = useDispatch();
-
-    const initialRoute = (loginStat) => {
-        if (loginStat === Util.Constants.LOGIN_STATUS.LOGGED_IN) {
-            return RouteConstants.PRIVATE_ROUTES.DASHBOARD;
-        } else {
-            return RouteConstants.PUBLIC_ROUTES.LOGIN;
-        }
-    };
-
-    if (LoginStatus === null) {
-        return <Splashscreen/>;
+  const initialRoute = loginStat => {
+    if (loginStat === Util.Constants.LOGIN_STATUS.LOGGED_IN) {
+      return RouteConstants.PRIVATE_ROUTES.DASHBOARD;
     } else {
-        return (
-            <NavigationContainer>
-                {
-                    LoginStatus === Util.Constants.LOGIN_STATUS.LOGGED_IN ? <PrivateNavigation tab={'drawer'}/>
-                        : <PublicNavigation initialRouteName={initialRoute(LoginStatus)}/>
-                }
-            </NavigationContainer>
-        );
+      return RouteConstants.PUBLIC_ROUTES.LOGIN;
     }
+  };
+
+  if (LoginStatus === null) {
+    return <Splashscreen />;
+  } else {
+    return (
+      <NavigationContainer>
+        {LoginStatus === Util.Constants.LOGIN_STATUS.LOGGED_IN ? (
+          <PrivateNavigation tab={'drawer'} />
+        ) : (
+          <PublicNavigation initialRouteName={initialRoute(LoginStatus)} />
+        )}
+      </NavigationContainer>
+    );
+  }
 };
 
 export default MainRoutes;

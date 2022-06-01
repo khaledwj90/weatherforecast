@@ -1,7 +1,5 @@
 // @flow
 
-class FormsValidations{
+class FormsValidations {}
 
-}
-
-export default FormsValidations
+export default FormsValidations;
