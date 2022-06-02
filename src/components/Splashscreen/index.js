@@ -4,7 +4,7 @@ import {View, Dimensions, Image} from 'react-native';
 import Icon from '../Icons';
 
 type Props = {};
-export const Splashscreen = (props: Props) => {
+export const Splashscreen = (props: Props): * => {
   const {height, width} = Dimensions.get('window');
   return (
     <View style={{justifyContent: 'center', height: height, width: width}}>

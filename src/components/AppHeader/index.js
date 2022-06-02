@@ -26,7 +26,7 @@ export const AppHeader = (props: Props): any => {
   //if we passed a child for the component
 
   const renderDefaultHeader = (withChild: boolean) => {
-    const mainStyles = [style.mainContainerNoChildren];
+    const mainStyles = [style().mainContainerNoChildren];
     if (withChild === true) {
       mainStyles.push({backgroundColor: 'transparent'});
     }
@@ -47,12 +47,12 @@ export const AppHeader = (props: Props): any => {
         ) : (
           <View style={{flex: 1}} />
         )}
-        <Text size={6} style={style.headerText}>
+        <Text size={6} weight={'bold'} style={style().headerText}>
           {props.headerText}
         </Text>
         <Animated.View
           style={[
-            style.right_section,
+            style().right_section,
             {
               opacity: props.animateValue
                 ? props.animateValue.interpolate({
@@ -62,7 +62,7 @@ export const AppHeader = (props: Props): any => {
                 : 1,
             },
           ]}>
-          <View style={style.sub_icons_container}>
+          <View style={style().sub_icons_container}>
             {typeof props.rightIcon !== 'undefined'
               ? props.rightIcon.map((icon, index) => {
                   if (icon.type === 'text') {
@@ -70,8 +70,8 @@ export const AppHeader = (props: Props): any => {
                       <TouchableOpacity
                         onPress={icon.action}
                         key={index}
-                        style={style.sub_icons_action}>
-                        <Text size={5} style={style.header_subText}>
+                        style={style().sub_icons_action}>
+                        <Text size={5} style={style().header_subText}>
                           {icon.icon}
                         </Text>
                       </TouchableOpacity>
@@ -81,7 +81,7 @@ export const AppHeader = (props: Props): any => {
                       <TouchableOpacity
                         onPress={icon.action}
                         key={index}
-                        style={style.sub_icons_action}>
+                        style={style().sub_icons_action}>
                         <Icon
                           name={icon.icon}
                           width={20}
@@ -111,7 +111,7 @@ export const AppHeader = (props: Props): any => {
         {/*check if we have title with the children*/}
         <View
           style={[
-            style.mainContainerWithChildren,
+            style().mainContainerWithChildren,
             {
               minHeight:
                 typeof props.headerText === 'undefined'

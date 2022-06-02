@@ -32,6 +32,15 @@
   RCTAppSetupPrepareApp(application);
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  
+  for (NSString* family in [UIFont familyNames])
+    {
+      NSLog(@"%@", family);
+      for (NSString* name in [UIFont fontNamesForFamilyName: family])
+      {
+        NSLog(@" %@", name);
+      }
+    }
 
 #if RCT_NEW_ARCH_ENABLED
   _contextContainer = std::make_shared<facebook::react::ContextContainer const>();

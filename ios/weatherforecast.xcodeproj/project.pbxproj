@@ -12,7 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		556BE5F1620F4985A2C6CE6E /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC4761585E84762B5F05890 /* OpenSans-Italic.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-weatherforecast-weatherforecastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-weatherforecast-weatherforecastTests.a */; };
+		7FEFD6CBB8C44E61A1F2578A /* OpenSans-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BA079E9B49543B09BDA50F9 /* OpenSans-VariableFont.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -36,11 +38,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = weatherforecast/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = weatherforecast/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = weatherforecast/main.m; sourceTree = "<group>"; };
+		15CDB7731F694430AE7D6DD6 /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-VariableFont_wdth,wght.ttf"; path = "../src/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-weatherforecast-weatherforecastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherforecast-weatherforecastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D80CEEA201443AFBAF2062A /* OpenSans-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic-VariableFont_wdth,wght.ttf"; path = "../src/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-weatherforecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherforecast.debug.xcconfig"; path = "Target Support Files/Pods-weatherforecast/Pods-weatherforecast.debug.xcconfig"; sourceTree = "<group>"; };
+		3BC4761585E84762B5F05890 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic.ttf"; path = "../src/assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-weatherforecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherforecast.release.xcconfig"; path = "Target Support Files/Pods-weatherforecast/Pods-weatherforecast.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-weatherforecast-weatherforecastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherforecast-weatherforecastTests.debug.xcconfig"; path = "Target Support Files/Pods-weatherforecast-weatherforecastTests/Pods-weatherforecast-weatherforecastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-weatherforecast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weatherforecast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA079E9B49543B09BDA50F9 /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-VariableFont.ttf"; path = "../src/assets/fonts/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = weatherforecast/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-weatherforecast-weatherforecastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherforecast-weatherforecastTests.release.xcconfig"; path = "Target Support Files/Pods-weatherforecast-weatherforecastTests/Pods-weatherforecast-weatherforecastTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		81A508154DCE42B79C3CD982 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D80CEEA201443AFBAF2062A /* OpenSans-Italic-VariableFont_wdth,wght.ttf */,
+				15CDB7731F694430AE7D6DD6 /* OpenSans-VariableFont_wdth,wght.ttf */,
+				3BC4761585E84762B5F05890 /* OpenSans-Italic.ttf */,
+				6BA079E9B49543B09BDA50F9 /* OpenSans-VariableFont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				81A508154DCE42B79C3CD982 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +262,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				556BE5F1620F4985A2C6CE6E /* OpenSans-Italic.ttf in Resources */,
+				7FEFD6CBB8C44E61A1F2578A /* OpenSans-VariableFont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q822YUTNTC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = weatherforecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,7 +516,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weatherforecast;
 				PRODUCT_NAME = weatherforecast;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -510,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7JFB2TP28S;
 				INFOPLIST_FILE = weatherforecast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,7 +542,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weatherforecast;
 				PRODUCT_NAME = weatherforecast;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

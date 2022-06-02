@@ -6,11 +6,12 @@ import Theme from '../../App.style';
 import Util from '../../util';
 
 type Props = {
-  size: number, // from 0 to 20
-  weight: 'bold' | 'light' | 'regular',
-  withAnimation: boolean,
+  size?: number, // from 0 to 20
+  weight?: 'bold' | 'light' | 'regular',
+  color?: string,
+  withAnimation?: boolean,
   numberOfLines?: number,
-  style: *,
+  style?: *,
   children: *,
 };
 
@@ -56,7 +57,7 @@ class Text extends Component<Props> {
           style={[
             {textAlign: 'left'},
             this.fontWeight(),
-            {fontSize: Util.Functions.FontSize(size)},
+            {fontSize: Util.Functions.FontSize(size), color: this.props.color},
             ...(style && style.length ? style : [style]),
           ]}>
           {this.props.children}
