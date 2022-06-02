@@ -5,10 +5,15 @@ import style from './homepage.currentDay.style';
 import Icon from '../../components/Icons';
 import useAppTheme from '../../appTheme';
 import Text from '../../components/Text';
+import {WeatherDataContext} from './homepage';
+import moment from 'moment';
+import {parseInt} from 'lodash';
 
 type Props = {};
 const HomepageCurrentDay = (props: Props): React.Node => {
   const [theme] = useAppTheme();
+  const weatherContext = React.useContext(WeatherDataContext);
+
   return (
     <View>
       <View style={style().firstSection}>
@@ -24,13 +29,15 @@ const HomepageCurrentDay = (props: Props): React.Node => {
             Today
           </Text>
           <Text size={1} weight={'light'} color={theme.textColor1}>
-            Sat, 3 Aug
+            {moment(weatherContext?.weatherData?.current?.dt).format(
+              'ddd, DD MMM',
+            )}
           </Text>
         </View>
       </View>
       <View style={style().secondSection}>
         <Text weight={'regular'} size={100} color={theme.textColor1}>
-          28
+          {parseInt(weatherContext.weatherData.current.temp)}
         </Text>
         <Text
           color={theme.textColor1}

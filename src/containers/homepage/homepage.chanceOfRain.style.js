@@ -3,7 +3,11 @@ import {StyleSheet} from 'react-native';
 import type {AppThemeType} from '../../appTheme';
 
 const barWidth = 17;
-const style = (theme: AppThemeType, isActive?: boolean): * =>
+const style = (
+  theme: AppThemeType,
+  isActive?: boolean,
+  popPercentage?: number = 0,
+): * =>
   StyleSheet.create({
     mainContainer: {
       flexDirection: 'column',
@@ -37,7 +41,7 @@ const style = (theme: AppThemeType, isActive?: boolean): * =>
     barItemOutside: {
       position: 'absolute',
       bottom: 0,
-      height: '50%',
+      height: popPercentage * 100,
       width: barWidth,
       borderRadius: barWidth / 2,
       backgroundColor: isActive ? theme?.color4 : theme?.color2,

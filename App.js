@@ -9,6 +9,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import axios from 'axios';
+import API from './src/api/index';
 import MainRoutes from './src/routes';
 import {ActivityIndicator} from './src/components/ActivityIndicator';
 import Text from './src/components/Text';
@@ -30,8 +31,14 @@ const App = () => {
     });
 
     axios.interceptors.response.use(response => {
-      console.log('Response:', response);
       return response;
+    });
+
+    //set lat lng for weather API
+    API.setWeatherAPIURL({
+      lat: 0.1864,
+      lng: 6.6131,
+      appId: '8b11e2e9c6927d1b146bd7ed29390077',
     });
   }, []);
 

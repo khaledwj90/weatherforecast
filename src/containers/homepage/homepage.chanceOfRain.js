@@ -6,6 +6,9 @@ import Text from '../../components/Text';
 import PageSpace from '../../components/PageSpace/pageSpace';
 import useAppTheme from '../../appTheme';
 import PageContainer from '../../components/PageContainer';
+import {WeatherDataContext} from './homepage';
+import _ from 'lodash';
+import moment from 'moment';
 
 type ChanceOfRainBarType = {
   hour: number,
@@ -13,8 +16,15 @@ type ChanceOfRainBarType = {
 };
 const ChanceOfRainBar = (props: ChanceOfRainBarType): * => {
   const [theme] = useAppTheme();
+  const weatherContext = React.useContext(WeatherDataContext);
   const currentHour = new Date().getHours();
   const isActive = currentHour === props.hour || currentHour === props.hour - 1;
+  const tempDetails = _.find(weatherContext.weatherData.hourly, x => {
+    return (
+      moment.unix(x.dt).hours() === props.hour ||
+      moment.unix(x.dt).hours() === props.hour - 1
+    );
+  });
 
   const Render12Hour = () => {
     const formattedHour = props.hour < 12 ? props.hour : props.hour - 12;
@@ -47,7 +57,7 @@ const ChanceOfRainBar = (props: ChanceOfRainBarType): * => {
     <View onLayout={onLayout}>
       <View style={style(theme).barItemContainer}>
         <View style={style(theme).barItemInside} />
-        <View style={style(theme, isActive).barItemOutside} />
+        <View style={style(theme, isActive, tempDetails.pop).barItemOutside} />
         <Render12Hour />
       </View>
     </View>

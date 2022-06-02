@@ -1,10 +1,13 @@
 // @flow
 import * as React from 'react';
 import {ScrollView, View} from 'react-native';
+import _ from 'lodash';
 import style from './homepage.weatherList.style';
 import Text from '../../components/Text';
 import useAppTheme from '../../appTheme';
 import Icon from '../../components/Icons';
+import {WeatherDataContext} from './homepage';
+import moment from 'moment';
 
 type WeatherItemProps = {
   hour: number,
@@ -12,8 +15,15 @@ type WeatherItemProps = {
 };
 const WeatherItem = (props: WeatherItemProps): React.Node => {
   const [theme] = useAppTheme();
+  const weatherContext = React.useContext(WeatherDataContext);
   const currentHour = new Date().getHours();
   const isActive = currentHour === props.hour || currentHour === props.hour - 1;
+  const tempDetails = _.find(weatherContext.weatherData.hourly, x => {
+    return (
+      moment.unix(x.dt).hours() === props.hour ||
+      moment.unix(x.dt).hours() === props.hour - 1
+    );
+  });
 
   const Render12Hour = () => {
     const formattedHour = props.hour < 12 ? props.hour : props.hour - 12;
@@ -71,7 +81,7 @@ const WeatherItem = (props: WeatherItemProps): React.Node => {
           weight={'bold'}
           size={10}
           color={isActive ? theme.color1 : theme.textColor2}>
-          26
+          {parseInt(tempDetails.temp)}
         </Text>
         <Text
           weight={'light'}
