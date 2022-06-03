@@ -16,5 +16,5 @@ class AP extends APISetup {
   }
 }
 
-const API = new AP();
+const API: * = new AP();
 export default API;

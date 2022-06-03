@@ -11,7 +11,7 @@ import HomepageWeatherList from './homepage.weatherList';
 import HomepageChanceOfRain from './homepage.chanceOfRain';
 import {ActivityIndicator} from '../../components/ActivityIndicator';
 
-export const WeatherDataContext = React.createContext({});
+export const WeatherDataContext: * = React.createContext({});
 type Props = {};
 const Homepage = (props: Props): React.Node => {
   const [weatherData, setWeatherData] = React.useState(null);
